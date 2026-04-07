@@ -2,9 +2,12 @@ spring:
   application:
     name: spring-ai-api
   ai:
-    openai:
-      ollama:
-        base-url: http://localhost:11434/
+    options:
+      model: "deepseek-r1:7b"
+    ollama:
+      base-url: http://localhost:11434/
       chat:
-        options:
-          model: "deepseek-r1:7b"
+        enabled: true
+    openai:
+      chat:
+        enabled: false

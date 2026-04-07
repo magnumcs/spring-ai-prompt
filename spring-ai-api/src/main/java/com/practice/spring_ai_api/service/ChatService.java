@@ -15,7 +15,7 @@ public class ChatService {
 
     private final ChatModel chatModel;
 
-    @Value(value = "${spring.ai.openai.chat.model}")
+    @Value(value = "${spring.ai.options.model}")
     private String model;
 
     public ChatService(ChatModel chatModel) {

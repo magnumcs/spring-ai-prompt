@@ -52,9 +52,8 @@ public class GenerativeAiController {
                                        @RequestParam(defaultValue = "1024") Integer width) {
 
         ImageResponse response = imageService.generateImage(prompt, quality, n, height, width);
-        List<String> imageUrls = response.getResults().stream()
+        return response.getResults().stream()
                 .map(result -> result.getOutput().getUrl())
                 .toList();
-        return imageUrls;
     }
 }

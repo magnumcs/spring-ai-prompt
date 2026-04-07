@@ -22,7 +22,7 @@ public class ImageService {
             Integer height,
             Integer width) {
 
-        ImageResponse imageResponse = imageModel.call(
+        return imageModel.call(
                 new ImagePrompt(prompt,
                         OpenAiImageOptions.builder()
                                 .quality(quality) //hd
@@ -32,6 +32,5 @@ public class ImageService {
                                 .build())
 
         );
-        return imageResponse;
     }
 }

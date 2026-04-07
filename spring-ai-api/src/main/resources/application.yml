@@ -2,11 +2,15 @@ spring:
   application:
     name: spring-ai-api
   ai:
+    options:
+      model: "deepseek-chat"
     openai:
       #api-key: ${OPEN_AI_API_KEY}
       api-key: ${DEEP_SEEK_API_KEY}
       base-url: https://api.deepseek.com/
       chat:
-        options:
-          model: "deepseek-chat"
           #model: "gpt-4o"
+        enabled: true
+    ollama:
+      chat:
+        enabled: false
